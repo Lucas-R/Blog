@@ -4,95 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link href="style.css" rel="stylesheet" />
-
-    <title> My Blog </title>
-
+    <title> Lucas Rodrigues </title>
 </head>
 <body>
-    <header>
-        <div class="container-header">
-            <div class="card-one">
-                <div class="description">
-                    <h1 id="fullname"> </h1>
-                    <p id="username"> </p>
-                    <p id="desc"> </p>
-                </div>
-                <div class="photo">
-                    <img class="photograph" src="" id="photo"/>
-                </div>
-            </div>
-            <div class="card-two">
-                <div class="infos"> 
-                    <ul>
-                        <a href="#" target="_blank" id="linkCompany"><li id="company"> </li></a>
-                        <a href="#" target="_blank" id="linkLocation"><li id="location"> </li></a>
-                        <a href="#"><li id="email"> </li></a>
-                        <a href="#" target="_blank" id="linkWebsite"><li id="website"> MyWebSite </li></a>
-                        <a href="#" target="_blank" id="linkTwitter"><li id="twitter"> Twitter </li></a>
-                    </ul>
-                </div>
-                <div class="button-box">
-                    <button class="more" onclick="handleMore()"> Ver Mais </button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main id="main">
-        <div width="500px" height="500px">
-            <h1> Em constreução </h1>
-            <h2> Em breve aqui estarão meus repositórios listados. </h2>
-        </div>
-    </main>
-
-    <footer>
-
-    </footer>
-
-    <button class="scrolltop" onclick="handleTop()"><span class="material-icons scrolltop-arrow">north</span> Voltar ao topo </button>
+    
 </body>
-<script src="jquery-3.6.0.min.js"></script>
-<script>
-    $(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    if(scroll > 400){
-        $('.scrolltop').addClass('active');
-    }else{
-        $('.scrolltop').removeClass('active');
-    }
-
-    console.log(scroll);
-    });
-    function handleTop(){
-        $("html, body").animate({ scrollTop: 0 }, 1000);
-    }
-
-    function handleMore(){
-        $('html, body').animate({
-            scrollTop: $("#main").offset().top,
-        }, 1000);
-    }
-
-    fetch('https://api.github.com/users/Lucas-R')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("fullname").innerHTML = data.name,
-        document.getElementById("username").innerHTML = '@' + data.login,
-        document.getElementById("desc").innerHTML = data.bio,
-        $("#photo").attr("src", data.avatar_url),
-
-        document.getElementById("company").innerHTML = data.company ? 'Company :' + data.company : "Company : Null",
-        document.getElementById("location").innerHTML = data.location ? 'Location :' + data.location : "Location : Null",
-        $("#linkLocation").attr("href", 'https://www.google.com/maps/search/'+ data.location),
-        document.getElementById("email").innerHTML = data.email ? 'Email :' + data.email : "Email : lucasrodriguesbezerra@outlook.com",
-        document.getElementById("website").innerHTML = data.blog ? 'Blog :' + data.blog : "Blog : Null",
-        $("#linkWebsite").attr("href", data.blog),
-        document.getElementById("twitter").innerHTML = data.twitter_username ? 'Twitter : @' + data.twitter_username : "Twitter : Null",
-        $("#linkTwitter").attr("href", 'https://twitter.com/' + data.twitter_username),
-        console.log(data)
-    })
-</script>
 </html>
