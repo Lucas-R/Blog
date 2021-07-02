@@ -1,0 +1,137 @@
+.container-home{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 33.33vh 33.33vh 33.33vh;
+    grid-template-areas: "home-top" "home-top" "home-bottom";
+    width: 80%;
+}
+
+.wrapper-photo{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #262522;
+    border-radius: 50%;
+}
+
+.photo{
+    width: 90%;
+    border-radius: 50%;
+}
+
+.home-top{
+    grid-area: home-top;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+}
+
+.wrapper-title{
+    width: 100%;
+    border-bottom: 1px solid #8d8d8d;
+}
+
+.title-home{
+    color: #FAFAFA;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+
+.title-span{
+    color: #F28705;
+    animation: colors 10s infinite;
+}
+
+.title-span:last-child{
+    animation-delay: 3s;
+}
+
+.pointer-text{
+    animation: blink 1s infinite;
+}
+
+.subtitle-home{
+    color: #8d8d8d;
+    font-weight: bold;
+}
+
+.home-bottom{
+    grid-area: home-bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.button-home{
+    width: 150px;
+    height: 40px;
+    background: transparent;
+    border-radius: 2px;
+    border: 1px solid #6EEEFC;
+    color: #6EEEFC;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    animation: shake 5s infinite;
+    animation-delay: 5s;
+}
+
+.button-home:hover{
+    background: #6EEEFC;
+    color: #FAFAFA;
+}
+
+@keyframes shake{
+    0%  { transform: rotate(0deg);}
+    2%  { transform: rotate(2deg);}
+    4% { transform: rotate(-2deg);}
+    6% { transform: rotate(2deg);}
+    8% { transform: rotate(-2deg);}
+    10% { transform: rotate(0deg);}
+}
+
+@keyframes blink{
+    0%{ opacity: 0;}
+}
+
+@keyframes colors{ 
+    0%      { color: #F28705;}
+    5%      { color: #1EB7D9;}
+    10%     { color: #05F240;}
+    15%     { color: #73261F;}
+    20%     { color: #F2E63D;}
+    25%     { color: #05DBF2;}
+    30%     { color: #4B0082;}
+    35%     { color: #FF00FF;}
+    40%     { color: #DC143C;}
+    45%     { color: #FFFF00;}
+    50%     { color: #0000CD;}
+    55%     { color: #2F4F4F;}
+    60%     { color: #1EB7D9;}
+    65%     { color: #05F240;}
+    70%     { color: #73261F;}
+    75%     { color: #F2E63D;}
+    80%     { color: #05DBF2;}
+    85%     { color: #4B0082;}
+    90%     { color: #FF00FF;}
+    95%     { color: #DC143C;}
+    100%    { color: #FFFF00;}
+  }
+  

@@ -1,0 +1,123 @@
+.container-perfil{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 50vh;
+    grid-template-areas:    "desc" "perfil";
+}
+
+.wrapper-desc{
+    grid-area: desc;
+    background: #393939;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-desc{
+    color: #FAFAFA;
+    font-weight: bold;
+}
+
+.desc{
+    color: #FAFAFA;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.wrapper-perfil{
+    grid-area: perfil;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wrapper-infos{
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wrapper-perfil-photo{
+    display: none;
+    width: 100%;
+}
+
+.photo-perfil{
+    width: 300px;
+    border-radius: 5px;
+}
+
+.name{
+    padding: 0;
+    margin: 0;
+    color: #393939;
+}
+
+.login{
+    padding: 0;
+    margin: 0;
+    color: #393939;
+}
+
+.title-links{
+    color: #393939;
+}
+
+.contact-list{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.icon-list{
+    float: left;
+}
+
+.contact-link{
+    text-decoration: none;
+    font-size: 1em;
+    color: #393939;
+}
+
+.link{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.contact-item{
+    line-height: 45px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-item:hover{
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #393939;
+    color: #FFF;
+}
+
+@media (min-width: 1000px){
+    .container-perfil{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 100vh;
+        grid-template-areas:    "desc perfil";
+    }
+    .wrapper-perfil-photo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-item:hover{
+        padding-left: 100px;
+        padding-right: 100px;
+        background: #393939;
+        color: #FFF;
+    }
+}
