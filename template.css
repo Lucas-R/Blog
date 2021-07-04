@@ -1,0 +1,241 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* INICIO CSS MENU */
+header{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background: #302B32;
+}
+
+nav{
+    width: 90%;
+    height: 100px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #5A5B5E;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper-brand{
+}
+
+.brand{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FAFAFA;
+}
+
+.wrapper-links{
+}
+
+.list-links{
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.list-item{
+    display: inline-block;
+    color: #5A5B5E;
+    padding: 15px 20px;
+}
+
+.list-item:hover{
+    background: #C9582D;
+    color: #FAFAFA;
+    border-radius: 5px;
+}
+
+/* CSS MOBILE */
+.menu-mobile{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu-mobile:hover{
+    background: #C9582D;
+}
+
+.menu-mobile:hover span{
+    background: #FAFAFA;
+}
+
+.menu-mobile span{
+    width: 100%;
+    height: 5px;
+    background: #5A5B5E;
+}
+
+.list-links-mobile{
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #302B32;
+    border-bottom: 5px solid #5A5B5E;
+    transform: translateX(100%);
+    transition: .3s;
+}
+
+.active{
+    transform: translateX(0);
+}
+/* FIM CSS MENU */
+
+/*  INICIO CSS MAIN */
+main{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "home"
+                            "bio";
+    justify-items: center;
+}
+
+.wrapper-home{
+    grid-area: home;
+    width: 100%;
+}
+
+.wrapper-wellcome{
+    background: #302B32;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30vh 40vh 30vh 300px;
+    grid-template-areas:    "title"
+                            "title"
+                            "button"
+                            "photo";
+    justify-items: center;
+}
+
+.wrapper-title{
+    grid-area: title;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #5A5B5E;
+}
+
+.title{
+    color: #FAFAFA;
+}
+
+.subtitle{
+    color: #5A5B5E;
+}
+
+.wrapper-button{
+    grid-area: button;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.button-home{
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1em;
+    color: #C9582D;
+    border: 1px solid #C9582D;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-home:hover{
+    color: #FAFAFA;
+    background: #C9582D;
+}
+
+.wrapper-photo{
+    grid-area: photo;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+}
+
+.photo{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #302B32;
+}
+
+.wrapper-bio{
+    grid-area: bio;
+    width: 80%;
+    padding-top: 180px;
+    padding: 180px 20px 20px 20px;
+}
+
+.photo img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+/*  FIM CSS MAIN */
+
+@media (max-width: 600px) {
+/* INICIO CSS MENU */
+    .menu-mobile{
+        display: flex;
+    }
+    .list-links{
+        display: none;
+    }
+    .list-links-mobile{
+        display: block;
+    }
+    .list-item{
+        display: list-item;
+        color: #5A5B5E;
+        padding: 15px 20px;
+    }
+    .list-item:hover::before{
+        content: ' ir para';
+    }
+/* FIM CSS MENU */
+}

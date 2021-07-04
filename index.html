@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link href="./src/styles/template.css" rel="stylesheet" />
-    <title> Lucas Rodrigues </title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+<link href="./template.css" rel="stylesheet" />
+<title>Document</title>
 </head>
 <body>
-    <div class="container" id="container">
-        <a href="#" class="close" id="close" onclick="handleClose()"> x </a>
-        <div class="container-wellcome">
-            <div class="lente-wellcome" id="lente-wellcome"></div>
-            <a class="handleView" onclick="handleView('wellcome')">
-                <img src="" id="imgWellcome"/>
-            </a>
-            <div class="wrapper-left-top">
-                <h1 class="wellcome-title"> Bem vindo ! </h1>
-            </div>
-
-            <div class="wrapper-left-middle">
-                <p class="desc-text"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
-            </div>
-        </div>
-        <div class="container-repos">
-            <div class="lente-repos" id="lente-repos"></div>
-            <a class="handleView" onclick="handleView('repos')">
-                <img src=""id="imgRepos"/>
-            </a>
-            <div class="wrapper-right-title">
-                <h1 class="repos-title"> repositórios </h1>
-            </div>
-
-            <div class="wrapper-repos">
-                <div class="repo">
-                    <h2 class="repo-title"> Repositório name </h2>
-                    <p class="repo-desc"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." </p>
-                    <p class="repo-info"> 1 stars - 1 year ago </p>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="wrapper-brand">
+                    <a class="brand" href="#"> Lucas Rodrigues </a>
                 </div>
+                <div class="wrapper-links">
+                    <div class="menu-mobile" id="button-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="list-links-mobile" id="list-mobile">
+                        <a class="link" href="#"><li class="list-item"> inicio </li></a>
+                        <a class="link" href="#"><li class="list-item"> perfil </li></a>
+                        <a class="link" href="#"><li class="list-item"> projetos </li></a>
+                    </ul>
 
-                <div class="repo">
-                    <h2 class="repo-title"> Repositório name </h2>
-                    <p class="repo-desc"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." </p>
-                    <p class="repo-info"> 1 stars - 1 year ago </p>
+                    <ul class="list-links">
+                        <a class="link" href="#"><li class="list-item"> inicio </li></a>
+                        <a class="link" href="#"><li class="list-item"> perfil </li></a>
+                        <a class="link" href="#"><li class="list-item"> projetos </li></a>
+                    </ul>
                 </div>
+            </nav>
+        </header>
 
-                <div class="repo">
-                    <h2 class="repo-title"> Repositório name </h2>
-                    <p class="repo-desc"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." </p>
-                    <p class="repo-info"> 1 stars - 1 year ago </p>
+        <main>
+            <section class="wrapper-home">
+                <div class="wrapper-wellcome">
+                    <div class="wrapper-title">
+                        <div>
+                            <h1 class="title"> Olá,</h1>
+                            <h1 class="title"> Eu sou Lucas</h1>
+                            <h1 class="title"> Web developer</h1>
+                            <h4 class="subtitle"> Front-end </h4>
+                        </div>
+                    </div>
+                    <div class="wrapper-photo">
+                        <div class="photo">
+                            <img src="./images/photo.png" alt="author" />
+                        </div>
+                    </div>
+                    <div class="wrapper-button">
+                        <button class="button-home"> Ver mais </button>
+                    </div>
                 </div>
-
-                <div class="repo">
-                    <h2 class="repo-title"> Repositório name </h2>
-                    <p class="repo-desc"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." </p>
-                    <p class="repo-info"> 1 stars - 1 year ago </p>
-                </div>
-            </div>  
-        </div>
-        <div class="container-perfil">
-            <div class="lente-perfil" id="lente-perfil"></div>
-            <a class="handleView" onclick="handleView('perfil')">
-                <img src="" id="imgPerfil" />
-            </a>
-            <div class="perfil-photo">
-                <img class="photo" src="" id="photo"/>
-            </div>
-            <div class="perfil-info">
-                <h1 class="perfil-fullname" id="fullname"> </h1>
-                <p class="perfil-username" id="username"> </p>
-                <p class="perfil-bio" id="bio"> </p>
-                <ul>
-                    <li> Company :   <a class="link" href="" target="_blank" id="company">   </a></li>
-                    <li> Location :  <a class="link" href="" target="_blank" id="location">  </a></li>
-                    <li> Email :     <a class="link" href="" target="_blank" id="email">     </a></li>
-                    <li> Website :   <a class="link" href="" target="_blank" id="website">   </a></li>
-                    <li> Twitter :   <a class="link" href="" target="_blank" id="twitter">   </a></li>
-                </ul>
-            </div>
-        </div> 
-    </div>
+            </section>
+            <section class="wrapper-bio">
+                <p class="bio">
+                    Eu me chamo Lucas Rodrigues, tenho 25 anos, programador Front-End. A pouco mais de 5 anos cursei Informatica para internet na Etec de Itanháem e outros cursos online. Sou apaixonado pelo mundo da programação a muitos anos. Aberto sempre a novas oportunidades e desafios.
+                </p>
+            </section>
+        </main>
+    </div>  
 </body>
-<script src="./src/js/jquery-3.6.0.min.js"></script>
-<script src="./src/js/scripts.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="scripts.js"></script>
 </html>
