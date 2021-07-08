@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+width: 0px;
+}
+  
 html, body {
     padding: 0;
     margin: 0;
@@ -121,9 +125,10 @@ main{
     margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:    "home"
-                            "bio";
+                            "bio"
+                            "repos";
     justify-items: center;
 }
 
@@ -204,17 +209,99 @@ main{
     border: 3px solid #302B32;
 }
 
-.wrapper-bio{
-    grid-area: bio;
-    width: 80%;
-    padding-top: 180px;
-    padding: 180px 20px 20px 20px;
-}
-
 .photo img{
     width: 280px;
     height: 280px;
     border-radius: 50%;
+}
+
+.wrapper-bio{
+    grid-area: bio;
+    width: 80%;
+    min-height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper-repos{
+    width: 100%;
+    grid-area: repos;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #5A5B5E;
+}
+
+.wrapper-repos::-webkit-scrollbar {
+    width: 10px;
+    height: 0;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.title-repos{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    color: #302B32;
+}
+
+.repos{
+    width: 100%;
+}
+
+.repo{
+    width: 100%;
+    border: 1px solid #C9582D;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.title-repo{
+    width: 100%;
+    height: 50px;
+    background: #C9582D;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+    color: #FAFAFA;
+}
+
+.desc-repo{
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    color: #302B32;
+}
+
+.footer-repo{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #C9582D;
+}
+
+.footer-repo a{
+    text-decoration: none;
+    color: #FAFAFA;
 }
 /*  FIM CSS MAIN */
 
@@ -238,4 +325,34 @@ main{
         content: ' ir para';
     }
 /* FIM CSS MENU */
+}
+
+@media (min-width: 999px){
+    main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100vh auto 80vh;
+        grid-template-areas:    "home home"
+                                "home home"
+                                "bio repos";
+    }
+    .wrapper-photo{
+        grid-area: photo;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 175px;
+    }
+    .photo{
+        width: 250px;
+        height: 250px;
+    }
+    
+    .photo img{
+        width: 230px;
+        height: 230px;
+    }
+    .wrapper-repos{
+        border-left: 2px solid #5A5B5E;
+        overflow: scroll;
+    }
 }
