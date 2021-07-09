@@ -219,7 +219,7 @@ main{
     grid-area: bio;
     width: 80%;
     min-height: 300px;
-    padding: 20px;
+    padding: 180px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
