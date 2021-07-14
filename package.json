@@ -1,0 +1,10 @@
+{
+  "name": "myBlog",
+  "version": "1",
+  "description": "meu protifólio",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

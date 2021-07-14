@@ -1,0 +1,147 @@
+.container-home{
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-home{
+    max-width: 800px;
+    width: 100%;
+}
+
+.wrapper-home > h1{
+    font-size: 4em;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.wrapper-home h1 > span{
+    font-weight: bold;
+}
+
+span:hover{
+    color: #05F240;
+}
+
+.hello{
+    position: relative;
+    left: -200%;
+    animation: text-left 1s;
+    animation-fill-mode: forwards;
+}
+
+.name{
+    position: relative;
+    left: -200%;
+    animation: text-left 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
+
+.desc{
+    position: relative;
+    left: -200%;
+    animation: text-left 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.wrapper-home .desc{
+    margin-top: 20px;
+    line-height: 1.5em;
+    text-align: justify;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.wrapper-home .desc > a{
+    text-decoration: none;
+    color: #05F240;
+}
+
+.wrapper-contact{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper-contact > a{
+    text-decoration: none;
+    color: #FAFAFA;
+}
+
+.wrapper-icon{
+    width: 45px;
+    height: 45px;
+    margin: 20px;
+    background: rgba(0,0,0,.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wrapper-contact .icon-home{
+    font-size: 25px;
+}
+
+.wrapper-icon:hover .icon-home{
+    color: #05F240;
+    animation: rotate 1s;
+}
+
+.wrapper-links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-links .link-home{
+    text-decoration: none;
+    width: 33.33%;
+}
+
+.wrapper-links .link-home > button{
+    text-decoration: none;
+    color: #FAFAFA;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: rgba(0,0,0,.2);
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.wrapper-links .link-home > button:hover{
+    background: #05F240;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper-home > h1{
+        font-size: 2.2em;
+    }
+
+    .wrapper-home .desc{
+        font-size: 1em;
+        line-height: 1em;
+    }
+    .wrapper-icon{
+        margin: 20px 0;
+    }
+    .wrapper-links{
+        display: block;
+    }
+    .wrapper-links .link-home{
+        width: 100%;
+    }
+    .wrapper-links .link-home > button{
+        padding-left: 20px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+}
